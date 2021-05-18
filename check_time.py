@@ -7,8 +7,8 @@ today = datetime.datetime.now()
 available = {}
 
 #Line message stuff
-#LINE_TOKEN = "Nx2jv18q15UHfNK6g3ucK7zEOAWZk8D4GQQqaUXY85O"
-LINE_TOKEN = "NZhc3XwoWWyF9EuxAZi05SbFCCFo8PHbXNWC2tawH2Z"
+LINE_TOKEN = "Nx2jv18q15UHfNK6g3ucK7zEOAWZk8D4GQQqaUXY85O"
+#LINE_TOKEN = "NZhc3XwoWWyF9EuxAZi05SbFCCFo8PHbXNWC2tawH2Z"
 
 for i in range(60):
 	day = today + datetime.timedelta(days=i)
@@ -25,5 +25,3 @@ for i in range(60):
 if available:
 	message = available
 	os.system("curl -X POST -H 'Authorization: Bearer {0}' -F 'message={1}' https://notify-api.line.me/api/notify".format(LINE_TOKEN, message))
-
-
